@@ -13,7 +13,8 @@ ul li {
 
 a {
   text-decoration: none;
-  color: #000;
+   color: rgb(9, 9, 77);
+   font-size: 16px; 
 }
 
 h1 {
@@ -21,30 +22,41 @@ h1 {
   color: rgb(42, 42, 100);
 }
 
-h3{
-    font-size: 20px;
-    margin: 8px 0px;
+h3 {
+  font-size: 20px;
+  margin: 8px 0px;
 }
 
 p {
+  padding: 4px;
   font-size: 14px;
   line-height: 24px;
 }
 
 .btn {
   width: 160px;
-  padding: 15px 5px;
+  padding: 12px 5px;
   font-size: 14px;
   border-radius: 5px;
   margin: 14px 2px;
   border: none;
 }
 
-.section-pd{
-padding: 40px 120px ;
+.active {
+  color: #fdcc0d;
+}
+
+.section-pd {
+  padding: 80px 100px;
+}
+
+.section-mr {
+  margin: 80px 100px 0;
 }
 
 /****************************************/
+
+/*************************** Home *******************************/
 
 /** navbar **/
 
@@ -83,7 +95,7 @@ padding: 40px 120px ;
   display: flex;
 }
 
-/** hero section **/
+/*************************************** hero section **************************************/
 
 #hero {
   background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)),
@@ -133,118 +145,494 @@ padding: 40px 120px ;
   color: #000;
 }
 
-/**** features *********/
-.feature-container{
-display: flex;
-margin:40px 0px;
+/************************************ features **********************************************/
+
+#feature{
+  height:55vh;
 }
 
-
-
-#feature >:is(h1,p){
-    text-align: center;
-}
-
-.fe-box i{
-   color: rgb(44, 44, 80);
-    font-size: 30px;
-} 
-
-.fe-box h3{
-color: rgb(46, 46, 59);
-}
-
-.fe-box{    
-    width: 30%;
-    background-color: #e9e9f8;
-    padding: 30px ;
-    margin-right:20px;
-}
-
-/***** course *****/
-
-#course >:is(h1,p){
-  text-align: center;
-}
-
-/* .course-box{
+#feature .feature-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-top:40px;
   width: 100%;
-  margin: 50px 0px;
-  gap: 50px;
-} */
-
-.course-box{
-  display: grid;
-  grid-template-columns:repeat(3,320px);
-  grid-template-rows:repeat(2,300px);
-  justify-content: center;
-  gap:20px 15px;
-  margin: 50px 20px;
-  
 }
 
-.course-box .course{
+#feature > :is(h1, p) {
+  text-align: center;
+}
+
+.fe-box i {
+  color: rgb(44, 44, 80);
+  font-size: 30px;
+}
+
+.fe-box h3 {
+  color: rgb(46, 46, 59);
+}
+
+.fe-box {
+  width: 30%;
+  background-color: #e9e9f8;
+  padding: 30px;
+  margin-right: 20px;
+}
+
+/********************************************** course ***************************************/
+#course{
+  padding:  100px 80px 100px;
+}
+
+#course > :is(h1, p) {
+  text-align: center;
+}
+
+#course .course-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  gap: 20px 15px;
+  margin: 50px 0px;
+}
+
+#course .course-box .course {
   position: relative;
   width: 100%;
   background-color: #e9e9f8;
 }
 
-.img-container{
-  width: 320px;
+.img-container {
+  width: inherit;
 }
 
-.img-container img{
+#course .course .img-container img {
   object-fit: cover;
-  object-position: top left;
+  object-position:center;
   width: 100%;
   height: 180px;
 }
 
-.course-box .price-tag{
-  position: absolute;
+.course-box .price-tag {
   display: flex;
+  justify-content: center;
   align-items: center;
-  background-color:#76448a;
+  background-color: #76448a;
   color: #fff;
   width: 60px;
-  height:60px;
-  font-weight: 600;
+  height: 60px;
+  font-weight: 700;
   font-size: 13px;
   text-align: center;
-  justify-content: center;
   border-radius: 50%;
-  top:50%;
-  right:5%;
-  padding: 4px ;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  padding: 4px;
 }
 
-.course-box span{
+.course-box span {
   font-size: 13px;
 }
 
-.course-box p{
+.course-box p {
   font-weight: 700;
   font-size: 15px;
-  padding: 2px 0px;
+  padding: 3px 0px;
 }
 
-.course-detail{
-  padding: 6px 15px;
+.course .course-detail {
+  padding: 30px 15px;
   width: 100%;
-  
 }
 
-.course-detail .rating span{
-  color: #626567 ;
+.course .course-detail .rating span {
+  color: #626567;
 }
 
-.course-detail .rating i{
-  margin-top: 6px ;
+.course-detail .rating i {
+  margin-top: 6px;
   font-size: 14px;
-  color:#FDCC0D;
+  color: #fdcc0d;
+}
+
+/*********************************** registration *************************************/
+
+#registration {
+  background-image: linear-gradient(
+      rgba(99, 112, 168, 0.5),
+      rgba(81, 91, 233, 0.5)
+    ),
+    url(./images/signup.jpg);
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+}
+
+#registration .countdown h1 {
+  padding: 4px 0px 20px 0;
+}
+
+.countdown :is(h1, p) {
+  color: #fff;
+}
+
+#registration .countdown .timer {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.countdown .timer span {
+  padding: 15px;
+  width: 95px;
+  margin: 15px 10px 0px 0px;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+#registration .login {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px 25px;
+  width: 30%;
+  height: 365px;
+}
+
+#registration .login h3 {
+  font-size: 18px;
+  padding-bottom: 5px;
+}
+
+#registration .login input {
+  margin-bottom: 30px;
+  border: 1px #76448a solid;
+  padding: 10px 6px;
+}
+
+#registration .login input:focus {
+  outline: none;
+}
+
+#registration .login button {
+  background-color: #fdcc0d;
+  color: #fff;
+  margin: 0px 2px;
+}
+
+/*********************************** experts *************************************/
+
+#experts > :is(h1, p) {
+  text-align: center;
+}
+
+#experts .profile {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+#experts .profile .prof {
+  height: 300px;
+  width: 20%;
+  margin-right: 15px;
+  background-color: #fafaf1;
+  padding: 20px 15px;
+}
+
+.prof :is(p, .socials) {
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.prof .socials i {
+  border: 1px solid rgb(42, 42, 100);
+  color: rgb(42, 42, 100);
+  padding: 8px;
+  margin-top: 16px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.prof .socials i:hover {
+  background-color: rgb(42, 42, 100);
+  color: #fff;
+}
+
+.prof p:first-of-type {
+  font-weight: 700;
+}
+
+#experts .profile .prof .image {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 12px;
+}
+
+#experts .profile .prof img {
+  width: 120px;
+}
+
+/*********************************** footer *************************************/
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #101c32;
+  padding: 90px 100px;
+}
+.col {
+  height: 40vh;
+}
+
+#footer .col span {
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+#footer .col a {
+  color: #a6acaf;
+}
+
+#footer .col a:hover {
+  color: #fff;
+}
+
+#footer .col a p {
+  padding-bottom: 13px;
+  font-size: 14px;
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+.col .mail {
+  display: flex;
+}
+
+.col .mail {
+  margin: 12px 3px 0px 0px;
+}
+
+.col .mail input {
+  outline: none;
+  border: none;
+  background-color: #334f6c;
+  font-size: 14px;
+  color: #fff;
+  padding: 8px 6px;
+  margin-right: 3px;
+  width: 200px;
+}
+
+.col .mail input::placeholder {
+  padding: 4px 3px;
+}
+.col .mail button {
+  width: 110px;
+  padding: 12px 12px;
+  background-color: #fdcc0d;
+  border: none;
+  transition: 0.5s;
+}
+
+.col .mail button:hover {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-bottom p {
+  color: #fff;
+}
+
+.footer-bottom .socials i {
+  color: #fff;
+  background-color: #626567;
+  padding: 12px 10px;
+  margin-right: 4px;
+  transition: 0.5s;
+}
+
+.footer-bottom .socials i:hover {
+  color: #626567;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/**************************************** About Us *****************************************/
+
+#banner {
+  background:linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.3)), url(./images/back1.jpg) no-repeat  center;
+  background-size: cover;
+  height: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#banner h1{ 
+  color: #fff;
+  font-size: 27px;
+}
+
+#Details{
+  height: 80vh;
+}
+
+#Details .course-detail{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin:80px 50px 0px ;
+}
+
+#Details .course-detail .image-container{
+  width: 50%;
+  height: 450px;
+}
+
+#Details .course-detail .image-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ 
+}
+
+#Details .course-detail  .course-info{
+  width: 40%;
+
+}
+
+.course-detail  .course-info p{
+  color: #626567;
+}
+
+ .course-detail .course-info .cinfo{
+  display: flex;
+  align-items:center;
+ }
+
+ .cinfo .description{
+  margin-left: 15px;
+  padding: 15px 0;
+ }
+
+/***** Trust *****/
+ #trust{
+  text-align: center;
+  margin: 80px 80px 120px 80px;
+ }
+
+  #trust .image-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px ;
+  }
+
+  #trust .image-container img{
+    width: 80px;
+  }
+
+/**************************************** Blog *********************************************/
+
+#blog{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#blog h3{
+  font-size: 17px;
+
+}
+
+#blog .courses{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+#blog .courses .course{
+  margin-bottom: 40px;
+}
+
+#blog .course .image{
+  width:100%;
+}
+
+#blog .course .image img{
+  width: 100%;
+  border-radius: 15px;
+}
+
+
+#blog .categories{
+  width: 30%;
+}
+
+#blog .course-desc a{
+  display: block;
+  width: 120px;
+  text-align: center;
+  background-color: rgb(44, 44, 80);
+  color: #fff;
+  padding: 10px ;
+  margin-top: 10px   ;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/*** Sblog ****/
+
+
+#sblog .course{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#sblog .course :is(.image,.course-desc){
+  width: 50%;
+}
+
+#sblog .course .image img{
+  width:100%;
+  border-radius: 10px;
+}
+
+#sblog .course-desc p{
+  color:#626567;
+  text-align: justify;
+}
+
+#sblog .course-desc a{
+  display: block;
+  margin-top: 20px;
+  background-color: rgb(21, 21, 100);
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
 }
 
 
@@ -255,8 +643,123 @@ color: rgb(46, 46, 59);
 
 
 
+/**************************************** Course *******************************************/
+
+/* #join-btn{
+  border: 1px solid rgb(42, 42, 100);
+  padding: 5px;
+} */
+
+
+/**************************************** Contact ******************************************/
+
+/********************************************** Responsive (home page)********************************************/
+
+/****************************** Tablet ***********************/
+
+@media (max-width: 769px) {
+  .section-pd {
+    padding: 40px 20px;
+  }
+
+ .section-mr {
+    margin: 40px 20px;
+}
+
+  h3 {
+    font-size: 17px;
+  }
+
+  #navbar {
+    height: 90px;
+    padding: 15px 40px 15px 40px;
+  }
+
+  #hero {
+    height: 40vh;
+  }
+
+/**** feature ****/
+
+#feature {
+    height: 45vh;
+}
+
+  .feature-container {
+    margin: 20px 0;
+  }
+
+  .fe-box {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+
+  /**** sblog ****/
+
+  #sblog .course :is(.image,.course-desc) {
+    width: 60%;
+}
+
+  /***  course ***/
+
+  #course {
+    padding: 40px 80px;
+}
+
+#course .course-box {
+    grid-template-columns: 450px;
+    grid-template-rows: 1fr;
+    justify-content: center;
+}
+
+  /*** registration *****/
+
+#registration {
+    height: 40vh;
+}
+
+#registration .login {
+    width: 50%;
+}
+
+  #experts .profile .prof {
+    width: 40%;
+    margin-bottom: 20px;
+  }
+
+  #footer {
+    padding: 80px 40px;
+  }
+
+  .col {
+    height: 20vh;
+    margin: 20px;
+  }
+
+  /******** ABOUT *******/
+
+  #banner {
+    height: 20vh;
+}
+
+#Details {
+    height: 50vh;
+}
+
+#Details .course-detail {
+    margin: 80px 50px 80px;
+}
+
+#trust {
+    margin: 60px 20px 80px 20px;
+}
+
+#trust .image-container {
+    margin: 20px;
+}
 
 
 
+}
 
-
+/****************************** mobile ***********************/
