@@ -796,7 +796,7 @@ li a#join {
 
 /**************************************** Contact ******************************************/
 
-#contact {
+.contact-us {
   display: flex;
   justify-content: space-around;
 }
@@ -870,6 +870,14 @@ li a#join {
 
 #contact .connect p {
   padding-bottom: 15px;
+}
+
+#contact .map {
+  margin-top: 100px;
+}
+
+#contact .map iframe {
+  width: 100%;
 }
 
 /********************************************** Responsive ********************************************/
@@ -1039,12 +1047,16 @@ li a#join {
   }
 
   .getin {
-    width: 100%;
+    width: 380px;
   }
 
   #contact .connect {
-    width: 100%;
-    margin-top: 30px;
+    width: 60%;
+    margin: 30px 0 30px 15px;
+  }
+
+  #contact .map {
+    margin-top: 60px;
   }
 }
 
@@ -1258,9 +1270,25 @@ li a#join {
     width: 80%;
   }
 
-  /****************** Course Page Mobile view *********************/
+  /****************** Contact Page Mobile view *********************/
 
   #contact .connect {
     height: 420px;
+  }
+
+  .contact-us {
+    flex-direction: column;
+  }
+  #contact .connect {
+    width: 100%;
+    margin: 30px 0;
+  }
+
+  #contact .connect input[placeholder="Your Name"] {
+    width: 80%;
+  }
+
+  #contact .connect input[placeholder="Your Email"] {
+    width: 90%;
   }
 }
