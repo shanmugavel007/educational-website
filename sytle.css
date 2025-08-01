@@ -81,7 +81,6 @@ p {
 #navbar .logo {
   height: 60px;
   cursor: pointer;
-  margin-right: 30px;
 }
 
 #navbar .logo img {
@@ -171,10 +170,6 @@ li a#join {
 
 /************************************ features **********************************************/
 
-#feature {
-  height: 55vh;
-}
-
 #feature .feature-container {
   display: flex;
   justify-content: space-between;
@@ -214,7 +209,7 @@ li a#join {
 
 #course .course-box {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: center;
   gap: 20px 15px;
   margin: 50px 0px;
@@ -484,6 +479,7 @@ li a#join {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer-bottom p {
@@ -519,10 +515,6 @@ li a#join {
 #banner h1 {
   color: #fff;
   font-size: 27px;
-}
-
-#Details {
-  height: 80vh;
 }
 
 #Details .course-detail {
@@ -880,7 +872,7 @@ li a#join {
   padding-bottom: 15px;
 }
 
-/********************************************** Responsive (home page)********************************************/
+/********************************************** Responsive ********************************************/
 
 /****************************** Tablet ***********************/
 
@@ -897,23 +889,21 @@ li a#join {
     font-size: 17px;
   }
 
+  /****************** Home Page Tablet view *********************/
+
   #navbar {
     height: 90px;
     padding: 20px;
   }
 
   #hero {
-    height: 40vh;
+    height: 35vh;
   }
 
   /**** feature ****/
 
-  #feature {
-    height: 45vh;
-  }
-
-  .feature-container {
-    margin: 20px 0;
+  #feature .feature-container {
+    margin: 20px 0 40px 0;
   }
 
   .fe-box {
@@ -922,24 +912,14 @@ li a#join {
     margin-bottom: 20px;
   }
 
-  /***** blog ****/
-
-  /**** sblog ****/
-
-  #sblog .course :is(.image, .course-desc) {
-    width: 60%;
-  }
-
   /***  course ***/
 
   #course {
-    padding: 40px 80px;
+    padding: 20px 40px;
   }
 
   #course .course-box {
-    grid-template-columns: 450px;
-    grid-template-rows: 1fr;
-    justify-content: center;
+    gap: 25px;
   }
 
   /*** registration *****/
@@ -952,34 +932,46 @@ li a#join {
     width: 50%;
   }
 
+  /*** experts *****/
+
   #experts .profile .prof {
     width: 40%;
     margin-bottom: 20px;
   }
 
+  /***** footer && footer bottom ***/
+
   #footer {
-    padding: 80px 40px;
+    padding: 40px;
+    gap: 12px;
   }
 
   .col {
-    height: 20vh;
-    margin: 20px;
+    height: 18vh;
+    margin-bottom: 0px;
   }
 
-  /***** footer bottom ***/
+  #footer .col span {
+    margin-bottom: 12px;
+  }
 
   .footer-bottom {
     flex-wrap: wrap;
+    margin-bottom: 50px;
   }
 
-  /******** ABOUT *******/
+  #footer .col a p {
+    padding-bottom: 10px;
+  }
+
+  #footer .col:nth-child(5) {
+    height: 12vh;
+  }
+
+  /******** ABOUT  page*******/
 
   #banner {
     height: 20vh;
-  }
-
-  #Details {
-    height: 50vh;
   }
 
   #Details .course-detail {
@@ -991,7 +983,7 @@ li a#join {
   }
 
   #trust {
-    margin: 60px 20px 80px 20px;
+    margin: 60px 20px 60px 20px;
   }
 
   #trust .image-container img {
@@ -1002,7 +994,17 @@ li a#join {
     margin: 20px;
   }
 
-  /***** Courses ******/
+  /****************** Blog Page Tablet view *********************/
+  /***** blog ****/
+  /**** sblog ****/
+
+  #sblog .course :is(.image, .course-desc) {
+    width: 70%;
+  }
+
+  /****************** Course Page Tablet view *********************/
+
+  /*** inner-course ****/
 
   .inner-detail {
     flex-direction: column;
@@ -1030,7 +1032,7 @@ li a#join {
     width: 90%;
   }
 
-  /****** Contact ******/
+  /****** Contact Us  ******/
 
   #contact {
     flex-direction: column;
@@ -1046,35 +1048,55 @@ li a#join {
   }
 }
 
-/****************************** mobile ***********************/
+/****************************** Mobile Responsive ***********************/
 
-@media (max-width: 415px) {
+@media (max-width: 430px) {
   /***navbar***/
 
   /* .mob-nav {
     display: block;
   } */
 
-  #course {
-    padding: 40px 20px;
-  }
-
   h1 {
     font-size: 20px;
   }
 
-  p {
-    font-size: 13px;
-    line-height: 25px;
-  }
+  /****************** Home Page Mobile view *********************/
+
+  /************* navbar **********/
 
   nav {
     display: none;
   }
 
+  #navbar {
+    height: 70px;
+    padding: 15px;
+  }
+
+  #navbar .logo {
+    height: 90px;
+  }
+
+  #navbar .logo img {
+    width: 90px;
+  }
+
+  /************* hero section **********/
+
   #hero {
     height: 100%;
-    padding: 30px 15px 20px 20px;
+    padding: 30px 10px 20px 10px;
+  }
+
+  #hero p span {
+    text-align: start;
+  }
+
+  #hero p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 24px;
   }
 
   .btn {
@@ -1082,9 +1104,7 @@ li a#join {
     padding: 12px 5px;
   }
 
-  #feature {
-    height: 100%;
-  }
+  /************* feature **********/
 
   .fe-box {
     width: 100%;
@@ -1093,6 +1113,12 @@ li a#join {
 
   #feature .feature-container {
     justify-content: center;
+  }
+
+  /************* course **********/
+
+  #course {
+    padding: 40px 20px;
   }
 
   #course .course-box {
@@ -1106,6 +1132,8 @@ li a#join {
   .course-box .price-tag {
     top: 45%;
   }
+
+  /************* registration **********/
 
   #registration {
     height: 100%;
@@ -1124,6 +1152,8 @@ li a#join {
     margin: 10px 8px 0px 0px;
   }
 
+  /************* experts **********/
+
   #experts .profile {
     gap: 20px;
   }
@@ -1134,7 +1164,103 @@ li a#join {
     background-color: #d1d8e0;
   }
 
+  /************* footer **********/
+
   #footer {
-    padding: 20px 40px;
+    padding: 25px 15px;
+    gap: 30px;
+  }
+
+  .col {
+    margin: 12px;
+  }
+
+  #footer .col span {
+    margin-bottom: 10px;
+  }
+
+  #footer .col a p {
+    padding-bottom: 6px;
+  }
+
+  .col .mail input {
+    width: 165px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: start;
+    margin: 15px;
+  }
+
+  .footer-bottom p {
+    margin-bottom: 20px;
+  }
+
+  /****************** About Page Mobile view *********************/
+
+  #Details .course-detail {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 40px 20px;
+  }
+
+  #Details .course-detail .image-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #Details .course-detail .course-info {
+    width: 100%;
+  }
+
+  #trust {
+    margin: 40px 15px;
+  }
+
+  #trust .image-container {
+    margin: 20px 0px;
+  }
+
+  #trust .image-container img {
+    width: 50px;
+  }
+
+  /****************** Blog Page Mobile view *********************/
+
+  #blog {
+    flex-direction: column-reverse;
+  }
+
+  #blog .courses {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  #blog .categories {
+    width: 70%;
+  }
+
+  /****************** Course Page Mobile view *********************/
+
+  /***** Course Inner ****/
+
+  #banner h1 {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .inner-detail {
+    align-items: start;
+  }
+
+  .inner-detail .enroll {
+    width: 80%;
+  }
+
+  /****************** Course Page Mobile view *********************/
+
+  #contact .connect {
+    height: 420px;
   }
 }
