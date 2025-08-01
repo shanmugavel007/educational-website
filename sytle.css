@@ -412,9 +412,6 @@ li a#join {
   background-color: #101c32;
   padding: 90px 100px;
 }
-.col {
-  height: 40vh;
-}
 
 #footer .col span {
   color: #fff;
@@ -625,7 +622,7 @@ li a#join {
 }
 
 #sblog .course :is(.image, .course-desc) {
-  width: 50%;
+  width: 80%;
 }
 
 #sblog .course .image img {
@@ -707,13 +704,11 @@ li a#join {
 }
 
 #course-inner .desc-head {
-  width: 60%;
-  margin-top: 20px;
-}
-
-#course-inner .desc-head {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  width: 60%;
+  margin-top: 20px;
 }
 
 #course-inner .inner-desc .rating {
@@ -809,10 +804,6 @@ li a#join {
   color: rgb(21, 21, 100);
 }
 
-#contact .getin hr {
-  margin: 8px 0;
-}
-
 #contact .getin h4 {
   padding-top: 12px;
   font-size: 15px;
@@ -829,7 +820,6 @@ li a#join {
   background-color: #eceaf5;
   padding: 30px;
   width: 50%;
-  height: 450px;
 }
 
 #contact .connect input[placeholder="Your Name"] {
@@ -844,9 +834,16 @@ li a#join {
 #contact :is(input, textarea) {
   margin-bottom: 20px;
   padding: 8px;
-  width: 85%;
   border: none;
   background-color: #fff;
+}
+
+#contact input {
+  width: 85%;
+}
+
+#contact textarea {
+  width: 100%;
 }
 
 #contact :is(input, textarea):focus {
@@ -886,11 +883,11 @@ li a#join {
 
 @media (max-width: 769px) {
   .section-pd {
-    padding: 40px 20px;
+    padding: 40px 30px;
   }
 
   .section-mr {
-    margin: 40px 20px;
+    margin: 40px 30px;
   }
 
   h3 {
@@ -955,7 +952,6 @@ li a#join {
   }
 
   .col {
-    height: 18vh;
     margin-bottom: 0px;
   }
 
@@ -972,14 +968,14 @@ li a#join {
     padding-bottom: 10px;
   }
 
-  #footer .col:nth-child(5) {
-    height: 12vh;
-  }
-
   /******** ABOUT  page*******/
 
   #banner {
-    height: 20vh;
+    height: 15vh;
+  }
+
+  #banner h1 {
+    font-size: 22px;
   }
 
   #Details .course-detail {
@@ -1007,7 +1003,7 @@ li a#join {
   /**** sblog ****/
 
   #sblog .course :is(.image, .course-desc) {
-    width: 70%;
+    width: 90%;
   }
 
   /****************** Course Page Tablet view *********************/
@@ -1019,7 +1015,7 @@ li a#join {
   }
 
   .inner-detail .image-container {
-    width: 80%;
+    width: 100%;
   }
 
   .inner-detail .enroll {
@@ -1037,7 +1033,7 @@ li a#join {
   }
 
   #course-inner .overview {
-    width: 90%;
+    width: 100%;
   }
 
   /****** Contact Us  ******/
@@ -1180,7 +1176,7 @@ li a#join {
 
   #footer {
     padding: 25px 15px;
-    gap: 30px;
+    gap: 30px 0;
   }
 
   .col {
@@ -1211,14 +1207,20 @@ li a#join {
 
   /****************** About Page Mobile view *********************/
 
+  #banner h1 {
+    text-align: center;
+    font-size: 16px;
+  }
+
   #Details .course-detail {
     display: flex;
     flex-direction: column;
-    margin: 20px 40px 20px;
+    margin: 40px 40px 20px;
   }
 
   #Details .course-detail .image-container {
     width: 100%;
+    height: 340px;
     margin-bottom: 20px;
   }
 
@@ -1257,24 +1259,23 @@ li a#join {
 
   /***** Course Inner ****/
 
-  #banner h1 {
-    text-align: center;
-    font-size: 20px;
-  }
-
   .inner-detail {
     align-items: start;
   }
 
   .inner-detail .enroll {
-    width: 80%;
+    width: 100%;
+  }
+
+  #course-inner .desc-head {
+    width: 100%;
+  }
+
+  #course-inner .desc-head p {
+    margin-bottom: 10px;
   }
 
   /****************** Contact Page Mobile view *********************/
-
-  #contact .connect {
-    height: 420px;
-  }
 
   .contact-us {
     flex-direction: column;
@@ -1284,11 +1285,15 @@ li a#join {
     margin: 30px 0;
   }
 
+  #contact input {
+    width: 100%;
+}
+
   #contact .connect input[placeholder="Your Name"] {
-    width: 80%;
+    width: 100%;
   }
 
   #contact .connect input[placeholder="Your Email"] {
-    width: 90%;
+    width: 100%;
   }
 }
