@@ -1041,11 +1041,7 @@ li a#join {
   #contact {
     flex-direction: column;
   }
-
-  .getin {
-    width: 380px;
-  }
-
+  
   #contact .connect {
     width: 60%;
     margin: 30px 0 30px 15px;
