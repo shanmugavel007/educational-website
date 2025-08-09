@@ -5,20 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Educational Website</title>
     <link rel="stylesheet" href="./sytle.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <script defer src="./script.js"></script>
   </head>
   <body>
     <!----------------------------  Navbar  ------------------------------>
     <section id="navbar">
       <div class="logo"><img src="./images/logo.svg" alt="logo" /></div>
-      <nav class="mb-nav">
+      <nav>
+        <i id="menu" class="fa-solid fa-bars"></i>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a class="active" href="blog.html">Blog</a></li>
           <li><a href="course.html">Courses</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a id="join" href="#">Join For Free</a></li>
+          <i class="fa-solid fa-xmark"></i>
         </ul>
       </nav>
     </section>
